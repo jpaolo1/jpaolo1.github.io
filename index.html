@@ -45,3 +45,210 @@
     .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .muted{color:var(--muted)}
     .avatar{aspect-ratio:1/1;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);padding:0}
+    .avatar-img{width:100%;height:auto;display:block;aspect-ratio:1/1;object-fit:cover;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02))}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .two{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr}
+      h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header role="navigation" aria-label="Primary">
+    <div class="container">
+      <nav>
+        <div class="brand">Joseph Paolo</div>
+        <div class="navlinks">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a class="btn small" href="#contact">Let’s connect</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container" id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <h1>Accounting &amp; Finance student → <span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent">Securitization Analyst</span></h1>
+        <p class="lead">Marist University senior focused on structured finance (RMBS/ABS), valuation, and data-driven automation. I analyze credit, build clean models, and leverage tools to save time and improve decision quality.</p>
+        <div class="row" style="margin-top:16px">
+          <a class="btn" href="#projects">See work</a>
+          <a class="btn ghost" href="mailto:joeypaolo03@gmail.com" aria-label="Email Joseph Paolo">Email me</a>
+          <!-- Résumé quick access -->
+          <a class="btn ghost" href="resume.pdf" target="_blank" rel="noopener" aria-label="Open résumé in a new tab">View résumé</a>
+        </div>
+        <div class="kpis" aria-label="Quick facts">
+          <div class="kpi"><b>GPA 3.65</b><span class="muted">BS Accounting &amp; Finance</span></div>
+          <div class="kpi"><b>Excel • VBA • Python</b><span class="muted">Data analysis &amp; automation</span></div>
+          <div class="kpi"><b>Bloomberg • Power BI</b><span class="muted">Certs: BMC, BFF, IRS VITA</span></div>
+        </div>
+      </div>
+      <div class="card avatar">
+        <img id="headshot" class="avatar-img" alt="Headshot of Joseph Paolo" src="Head%20Shot.jpg" loading="eager" decoding="async"
+             onerror="this.style.display='none';document.getElementById('avatar-fallback').style.display='grid';">
+        <div id="avatar-fallback" style="display:none;place-items:center;height:100%;color:#94a3b8">
+          <div style="text-align:center">
+            <div style="font-weight:700;margin-bottom:6px">Headshot not found</div>
+            <div style="font-size:12px;line-height:1.4">Add <code>assets/headshot.jpg</code> to your repo<br>or rename your file to exactly that.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="two">
+        <div class="card">
+          <p>I’m Joseph Paolo, a senior at Marist University pursuing a B.S. in Accounting &amp; Finance, with plans for CPA and CFA credentials. I have experience across audit, tax, and financial services, and recently concentrated on securitization with hands-on exposure to RMBS/ABS due diligence and modeling.</p>
+          <div>
+            <span class="tag">Securitization (RMBS/ABS)</span>
+            <span class="tag">Financial Valuation (DCF/DDM)</span>
+            <span class="tag">Audit &amp; Assurance</span>
+            <span class="tag">Tax</span>
+            <span class="tag">Automation</span>
+            <span class="tag">Bloomberg Terminal</span>
+            <span class="tag">AI Fluency</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>What I bring</h3>
+          <ul>
+            <li>Hands-on securitization exposure at Deloitte (AUP reviews, stratifications, replines).</li>
+            <li>Audit, tax, and finance internships across public accounting and financial services.</li>
+            <li>Strong data analysis, modeling, and automation skills (Excel/VBA/Python).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Deloitte &amp; Touche  Securitization Intern</h3>
+          <p class="muted">Audit &amp; Assurance • Jersey City, NJ • Jun&nbsp;2025–Jul&nbsp;2025</p>
+          <ul>
+            <li>Reviewed Agreed-Upon Procedures (AUP) reports for structured finance transactions to validate calculations and compliance.</li>
+            <li>Used CAS to build stratifications/replines; tied collateral data back to client records.</li>
+            <li>Ran due diligence checks on loan pools pre-securitization and reconciled to offering docs.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Public Accounting Firm — Audit Intern</h3>
+          <p class="muted">Newburgh, NY • Jan&nbsp;2025–May&nbsp;2025</p>
+          <ul>
+            <li>Performed testing across cash, expenses, assets, and liabilities; prepared workpapers in CCH Engagement.</li>
+            <li>Imported trial balances and reconciled GL accounts; assisted with AJE preparation.</li>
+            <li>Supported GAAP-compliant financial statement reviews.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Public Accounting Firm — Audit Intern</h3>
+          <p class="muted">Newburgh, NY • Jun&nbsp;2024–Jul&nbsp;2024</p>
+          <ul>
+            <li>Executed audit procedures, prepared/updated workpapers, and supported on-site testing.</li>
+            <li>Collected client documentation via QuickBooks Online and maintained schedules.</li>
+            <li>Rolled forward audits; verified GL balances and reviewed JE support.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Public Accounting Firm - Tax Intern</h3>
+          <p class="muted">Tax Preparation • Staatsburg, NY • Apr&nbsp;2024–Jun&nbsp;2024</p>
+          <ul>
+            <li>Prepared individual and S-corp returns with UltraTax CS.</li>
+            <li>Built efficiency dashboards (pivot tables/graphs) to inform cost-cutting actions.</li>
+            <li>Compared client metrics and trends across prior-year/ current returns.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Public Financial Services and Insurance Company: Office of the CFO  Intern</h3>
+          <p class="muted">Financial Reporting • New York, NY • Jun&nbsp;2024–Jul&nbsp;2024</p>
+          <ul>
+            <li>Updated Excel metrics for weekly and end-of-quarter STAT reporting; transcribed CFO pre-close meetings.</li>
+            <li>Performed data QC with Accounting, Actuarial, Investments, and IR teams to ensure reporting accuracy.</li>
+            <li>Analyzed competitors' financials and presented insights to the CFO and Treasury team.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects & Publications -->
+    <section id="projects" class="section">
+      <h2>Projects &amp; Publications</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Financial Statement Analysis Project</h3>
+          <p class="muted">Marist University • Fall&nbsp;2024</p>
+          <ul>
+            <li>Analyzed Kroger, Salesforce, and The Gabelli Fund over a three-month period.</li>
+            <li>Built pro forma projections; portfolio return 18.17% (annualized 95.02%).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>“Real Changes or Empty Promises”</h3>
+          <p class="muted">CPA Journal • Jul/Aug&nbsp;2025</p>
+          <ul>
+            <li>Explored how regulation and politics shape Fortune 500 DEI strategy and disclosures.</li>
+            <li>Discussed implications of Executive Order 14173 on reporting practices.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Greystone Equity Fund — Analyst &amp; Reporting Specialist</h3>
+          <p class="muted">Student-Managed Fund • Sep&nbsp;2024–Dec&nbsp;2024</p>
+          <ul>
+            <li>Covered IT, Communications, and Industrials; used Bloomberg, Morningstar, and ValuLine.</li>
+            <li>Pitched GOOG, INTU, ODFL with 10-page reports/decks; all approved and added.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="two">
+        <div class="card">
+          <p>Open to internships and projects in securitization, credit, and equity research. Fastest way to reach me: email.</p>
+          <p>
+            <strong>Email:</strong> <a href="mailto:joeypaolo03@gmail.com">joeypaolo03@gmail.com</a><br>
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/joseph-paolo12" target="_blank" rel="noopener">linkedin.com/in/joseph-paolo12</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Résumé</h3>
+          <p class="muted">Open or download my latest résumé (PDF).</p>
+          <div class="row">
+            <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View résumé</a>
+            <a class="btn ghost" href="resume.pdf" download="Joseph-Paolo-Resume.pdf">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="two">
+        <div>© <span id="y"></span> Joseph Paolo. All rights reserved.</div>
+        <div class="muted" style="text-align:right">Built with GitHub Pages.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
