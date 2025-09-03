@@ -251,68 +251,58 @@
 </section>
 
 <!-- ✅ START: CAREER TIMELINE SECTION -->
-<section class="timeline-container">
-  <!-- Top Row -->
-  <div class="timeline-row top">
-    <div class="timeline-item">
-      <div class="timeline-content">
+<section class="career-timeline-section">
+  <h2 class="career-title">Career Timeline</h2>
+  <div class="timeline-container">
+    <!-- Row 1: Chronological Upper Row -->
+    <div class="timeline-row top">
+      <div class="timeline-card">
+        <div class="dot top"></div>
         <h3>2023</h3>
-        <p class="date">Jun – Aug</p>
+        <p class="date-range">Jun – Aug</p>
         <p>Equitable Holdings Inc.</p>
-        <strong>Finance Intern</strong>
+        <p><strong>Finance Intern</strong></p>
       </div>
-      <div class="timeline-dot"></div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
+      <div class="timeline-card">
+        <div class="dot top"></div>
         <h3>2024</h3>
-        <p class="date">Jun – Jul</p>
-        <p>RBT CPA’s</p>
-        <strong>Audit Intern</strong>
-      </div>
-      <div class="timeline-dot"></div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <h3>2025</h3>
-        <p class="date">Jun – Jul</p>
-        <p>Deloitte & Touche</p>
-        <strong>Securitization Intern</strong>
-      </div>
-      <div class="timeline-dot"></div>
-    </div>
-  </div>
-
-  <!-- Horizontal Line -->
-  <div class="timeline-line"></div>
-
-  <!-- Bottom Row -->
-  <div class="timeline-row bottom">
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>2024</h3>
-        <p class="date">Apr – Jun</p>
+        <p class="date-range">Apr – Jun</p>
         <p>NY Tax Strategies Inc.</p>
-        <strong>Tax Intern</strong>
+        <p><strong>Tax Intern</strong></p>
       </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
+      <div class="timeline-card">
+        <div class="dot top"></div>
         <h3>2024</h3>
-        <p class="date">Sept – Dec</p>
-        <p>Greystone Equity Fund</p>
-        <strong>Financial Analyst</strong>
+        <p class="date-range">Jun – Jul</p>
+        <p>RBT CPA’s</p>
+        <p><strong>Audit Intern</strong></p>
       </div>
     </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
+
+    <div class="line"></div>
+
+    <!-- Row 2: Chronological Lower Row -->
+    <div class="timeline-row bottom">
+      <div class="timeline-card">
+        <div class="dot bottom"></div>
+        <h3>2024</h3>
+        <p class="date-range">Sept – Dec</p>
+        <p>Greystone Equity Fund</p>
+        <p><strong>Financial Analyst</strong></p>
+      </div>
+      <div class="timeline-card">
+        <div class="dot bottom"></div>
         <h3>2025</h3>
-        <p class="date">Jan – May</p>
+        <p class="date-range">Jan – May</p>
         <p>PKF O’Connor Davies</p>
-        <strong>Audit Intern</strong>
+        <p><strong>Audit Intern</strong></p>
+      </div>
+      <div class="timeline-card">
+        <div class="dot bottom"></div>
+        <h3>2025</h3>
+        <p class="date-range">Jun – Jul</p>
+        <p>Deloitte & Touche</p>
+        <p><strong>Securitization Intern</strong></p>
       </div>
     </div>
   </div>
@@ -321,85 +311,71 @@
 
 <!-- ✅ START: CSS TIMELINE STYLES -->
 <style>
-.timeline-container {
-  position: relative;
+.career-timeline-section {
   padding: 4rem 2rem;
   background-color: #0b0d12;
-  color: #e9edf5;
-  font-family: sans-serif;
+  text-align: center;
 }
 
-.timeline-line {
+.career-title {
+  font-size: 2.5rem;
+  color: #e9edf5;
+  margin-bottom: 2rem;
+}
+
+.timeline-container {
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
-  height: 4px;
-  background-color: #ccc;
-  width: 100%;
-  margin: 3rem 0;
-  z-index: 1;
 }
 
 .timeline-row {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  margin: 3rem 0;
+}
+
+.timeline-card {
+  background: #121622;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 250px;
+  box-shadow: 0 0 12px #6ae3ff25;
+  color: #e9edf5;
   position: relative;
 }
 
-.timeline-row.top {
-  align-items: flex-end;
+.timeline-card .date-range {
+  font-size: 0.95rem;
+  color: #cfcfcf;
+  margin-bottom: 0.3rem;
 }
 
-.timeline-row.bottom {
-  align-items: flex-start;
-}
-
-.timeline-item {
-  text-align: center;
-  margin: 2rem;
-  position: relative;
-  max-width: 220px;
-  z-index: 2;
-}
-
-.timeline-dot {
-  width: 14px;
-  height: 14px;
+.dot {
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: #6ae3ff;
-  border: 2px solid white;
-  margin: 0 auto;
+  border: 2px solid #e9edf5;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot.top {
+  top: -30px;
+}
+
+.dot.bottom {
+  bottom: -30px;
+}
+
+.line {
+  height: 4px;
+  background-color: #e9edf5;
+  width: 100%;
   position: relative;
-  top: 1rem;
-  z-index: 3;
-}
-
-.timeline-content {
-  background: #121622;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px #6ae3ff33;
-}
-
-.timeline-content h3 {
-  margin: 0;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-.timeline-content .date {
-  font-size: 0.9rem;
-  color: #8b94a7;
-  margin: 0.25rem 0;
-}
-
-.timeline-content p {
-  margin: 0.3rem 0;
-}
-
-.timeline-content strong {
-  display: block;
-  font-weight: bold;
-  margin-top: 0.3rem;
+  z-index: 0;
 }
 </style>
 <!-- ✅ END: CSS TIMELINE STYLES -->
