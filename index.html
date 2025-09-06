@@ -385,7 +385,51 @@
   </div>
 </section>
     
-  <!-- Contact --> <section id="contact" class="section"> <h2>Contact</h2> <div class="two"> <div class="card"> <p>Open to internships and projects in securitization, credit, and equity research. Fastest way to reach me: email.</p> <p> <strong>Email:</strong> <a href="mailto:joeypaolo03@gmail.com">joeypaolo03@gmail.com</a><br> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/joseph-paolo12" target="_blank" rel="noopener">linkedin.com/in/joseph-paolo12/a> </p> </div> <div class="card"> <h3>Résumé</h3> <p class="muted">Open or download my latest résumé (PDF).</p> <div class="row"> <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View résumé</a> <a class="btn ghost" href="resume.pdf" download="Joseph-Paolo-Resume.pdf">Download</a> </div> </div> </div> </section> </main>
+ <!-- Contact -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+
+  <!-- layout styles just for this section -->
+  <style>
+    /* default: stack on small screens */
+    #contact .two {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    /* desktop/tablet: 2 columns, résumé on the right */
+    @media (min-width: 900px) {
+      #contact .two {
+        grid-template-columns: 1fr 1fr; /* two equal columns */
+        align-items: start;
+      }
+      #contact .two .card { height: 100%; }
+    }
+  </style>
+
+  <div class="two">
+    <div class="card">
+      <p>Open to internships and projects in securitization, credit, and equity research. Fastest way to reach me: email.</p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:joeypaolo03@gmail.com">joeypaolo03@gmail.com</a><br>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/joseph-paolo12" target="_blank" rel="noopener">
+          linkedin.com/in/joseph-paolo12
+        </a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Résumé</h3>
+      <p class="muted">Open or download my latest résumé (PDF).</p>
+      <div class="row">
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View résumé</a>
+        <a class="btn ghost" href="resume.pdf" download="Joseph-Paolo-Resume.pdf">Download</a>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- Footer -->
   <footer>
     <div class="container">
