@@ -455,14 +455,25 @@
     </div>
 
     <div class="card">
-      <h3>Résumé</h3>
-      <p class="muted">Open or download my latest résumé (PDF).</p>
-      <div class="row">
-        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View résumé</a>
-        <a class="btn ghost" href="resume.pdf" download="Joseph-Paolo-Resume.pdf">Download</a>
-      </div>
-    </div>
+  <h3>Résumé</h3>
+  <p class="muted">Open or download my latest résumé (PDF).</p>
+  <div class="row">
+    <!-- View button with cache-busting -->
+    <a class="btn" 
+       href="resume.pdf?v=20250922-1" 
+       target="_blank" 
+       rel="noopener">
+       View résumé
+    </a>
+    
+    <!-- Download button unchanged -->
+    <a class="btn ghost" 
+       href="resume.pdf" 
+       download="Joseph-Paolo-Resume.pdf">
+       Download
+    </a>
   </div>
+</div>
 </section>
 
   <!-- Footer -->
